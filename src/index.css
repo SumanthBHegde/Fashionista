@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;1,900&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+.app {
+  @apply relative w-full h-screen overflow-hidden;
+}
+
+.home {
+  @apply w-full h-screen flex xl:justify-between justify-start items-start flex-col xl:py-8 xl:px-36 sm:p-8 p-6 max-xl:gap-7 absolute top-0 left-0 z-20;
+}
+
+.home-content {
+  @apply flex-1 xl:justify-center justify-start flex flex-col gap-10;
+}
+
+.head-text {
+  @apply xl:text-[4rem] text-[3rem] xl:leading-[4.5rem] leading-[3.5rem] font-black;
+}
+
+.download-btn {
+  @apply w-14 h-14 flex justify-center items-center rounded-full glassmorphism cursor-pointer outline-none;
+}
+
+.editor-tabs-container {
+  @apply glassmorphism w-16 border-[2px] rounded-lg flex flex-col justify-center items-center ml-1 py-4 gap-4;
+}
+
+.filter-tabs-container {
+  @apply absolute z-10 bottom-5 right-0 left-0 w-full flex justify-center items-center flex-wrap gap-4;
+}
+
+.file-picker-container {
+  @apply absolute left-full ml-3 glassmorphism p-3 w-[195px] h-[220px] flex flex-col rounded-md;
+}
+
+.file-picker-label {
+  @apply border border-gray-300 py-1.5 px-2 rounded-md shadow-sm text-xs text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 cursor-pointer w-fit;
+}
+
+.tab-btn {
+  @apply w-14 h-14 flex justify-center items-center cursor-pointer select-none;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+input[type="file"] {
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+}
+
+.sketch-picker {
+  width: 170px !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 6px !important;
+}
+
+.sketch-picker > div:nth-child(3) {
+  display: none !important;
+}
+
+/* Enhanced styles for new controls */
+.aipicker-container {
+  @apply absolute left-full ml-3 top-0 glassmorphism p-4 w-[320px] max-h-[500px] overflow-y-auto flex flex-col rounded-lg shadow-xl;
+}
+
+.control-section {
+  @apply mb-4 p-3 bg-white bg-opacity-10 rounded-lg border border-white border-opacity-20;
+}
+
+.control-label {
+  @apply block text-white text-sm font-medium mb-2;
+}
+
+.control-input {
+  @apply w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer transition-all duration-200;
+}
+
+.control-input::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 bg-blue-500 rounded-full cursor-pointer shadow-lg;
+}
+
+.control-input::-moz-range-thumb {
+  @apply w-4 h-4 bg-blue-500 rounded-full cursor-pointer border-none shadow-lg;
+}
+
+.control-input:hover {
+  @apply bg-gray-200;
+}
+
+.control-input:hover::-webkit-slider-thumb {
+  @apply bg-blue-400;
+}
+
+.control-button {
+  @apply px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 border border-transparent;
+}
+
+.control-button-primary {
+  @apply control-button bg-blue-500 text-white hover:bg-blue-600 hover:shadow-lg;
+}
+
+.control-button-secondary {
+  @apply control-button bg-green-500 text-white hover:bg-green-600 hover:shadow-lg;
+}
+
+.control-button-toggle {
+  @apply control-button border-2 font-semibold;
+}
+
+.control-button-toggle-active {
+  @apply bg-blue-600 text-white border-blue-400;
+}
+
+.control-button-toggle-inactive {
+  @apply bg-gray-600 text-gray-300 border-gray-500 hover:bg-gray-500;
+}
+
+.position-grid {
+  @apply grid grid-cols-1 gap-3;
+}
+
+.input-group {
+  @apply flex flex-col space-y-2;
+}
+
+.input-label-small {
+  @apply block text-white text-xs font-medium;
+}
+
+.value-display {
+  @apply text-xs text-gray-300 mt-1 flex justify-between;
+}
+
+.panel-header {
+  @apply font-semibold text-white mb-3 pb-2 border-b border-gray-600;
+}
+
+.status-indicator {
+  @apply px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.status-visible {
+  @apply bg-green-600 text-white;
+}
+
+.status-hidden {
+  @apply bg-red-600 text-white;
+}
+
+.rotation-controls {
+  @apply space-y-3;
+}
+
+.rotation-axis {
+  @apply space-y-1;
+}
