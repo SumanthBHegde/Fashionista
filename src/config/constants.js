@@ -34,7 +34,7 @@ export const FILTER_TABS = [
   },
   {
     name: "viewToggle",
-    icon: "./flip-switch.svg", // Flip/switch SVG icon for front/back view toggle
+  icon: import.meta.env.BASE_URL + "flip-switch.svg", // Flip/switch SVG icon for front/back view toggle
   },
 ];
 

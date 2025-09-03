@@ -16,7 +16,7 @@ import Base3DModel from "./BaseModel3D";
 const Shirt3DModel = () => {
   return (
     <Base3DModel
-      modelPath="/shirt-baked.glb"
+      modelPath={import.meta.env.BASE_URL + "shirt-baked.glb"}
       geometryName="T_Shirt_male"
       materialName="lambert1"
       fallbackGeometryNames={["Object_2", "Object_0", "Shirt", "shirt", "Mesh"]}

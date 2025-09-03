@@ -48,8 +48,8 @@ const UnifiedLogoPicker = ({ file, setFile, readFile }) => {
 
   const handleCancelLogo = (side) => {
     if (side === "front") {
-      state.frontLogoDecal = "./react.png";
-      state.logoDecal = "./react.png";
+  state.frontLogoDecal = import.meta.env.BASE_URL + "react.png";
+  state.logoDecal = import.meta.env.BASE_URL + "react.png";
     } else {
       state.backLogoDecal = null;
       state.showBackLogo = false;
@@ -74,7 +74,7 @@ const UnifiedLogoPicker = ({ file, setFile, readFile }) => {
   const hasDefaultLogo = (side) => {
     const currentLogo = getCurrentLogo(side);
     return side === "front"
-      ? currentLogo === "./react.png"
+  ? currentLogo === import.meta.env.BASE_URL + "react.png"
       : !currentLogo || currentLogo === "" || currentLogo === null;
   };
 

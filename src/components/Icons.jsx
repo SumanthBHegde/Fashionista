@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 export const SwatchIcon = ({ className = "w-6 h-6", color = "white" }) => (
   <img
-    src="/color-palette.svg"
+  src={import.meta.env.BASE_URL + "color-palette.svg"}
     alt="Color Palette"
     className={className}
     style={{ filter: color === "white" ? "brightness(0) invert(1)" : "none" }}
@@ -56,7 +56,7 @@ DownloadIcon.propTypes = {
 
 export const LogoClothIcon = ({ className = "w-6 h-6", color = "white" }) => (
   <img
-    src="/shirt-logo.svg"
+  src={import.meta.env.BASE_URL + "shirt-logo.svg"}
     alt="Shirt with Logo"
     className={className}
     style={{ filter: color === "white" ? "brightness(0) invert(1)" : "none" }}
@@ -70,7 +70,7 @@ LogoClothIcon.propTypes = {
 
 export const StyleClothIcon = ({ className = "w-6 h-6", color = "white" }) => (
   <img
-    src="/shirt-textured.svg"
+  src={import.meta.env.BASE_URL + "shirt-textured.svg"}
     alt="Textured Shirt"
     className={className}
     style={{ filter: color === "white" ? "brightness(0) invert(1)" : "none" }}
