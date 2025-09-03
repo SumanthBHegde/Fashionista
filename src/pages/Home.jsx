@@ -26,7 +26,7 @@ const Home = () => {
         >
           {/* Logo */}
           <motion.img
-            src="/main-logo.svg"
+            src={import.meta.env.BASE_URL + "main-logo.svg"}
             alt="Fashionista Logo"
             className="w-12 h-12 object-contain"
             initial={{ opacity: 0, y: -20 }}

@@ -30,12 +30,12 @@ const state = proxy({
   selectedModel: APP_CONFIG.defaults.selectedModel || "shirt", // Default to shirt
   availableModels: APP_CONFIG.models || {
     shirt: {
-      path: "/shirt-baked.glb",
+      path: import.meta.env.BASE_URL + "shirt-baked.glb",
       name: "T-Shirt",
       geometry: "T_Shirt_male",
     },
     hoodie: {
-      path: "/hoodie.glb",
+      path: import.meta.env.BASE_URL + "hoodie.glb",
       name: "Hoodie",
       geometry: "Hoodie_FABRIC_3_FRONT_1850_0",
     },

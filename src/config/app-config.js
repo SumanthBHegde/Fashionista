@@ -25,25 +25,25 @@ export const APP_CONFIG = {
 
   defaults: {
     clothColor: "#2563eb", // Using theme primary color
-    logoDecal: "./react.png",
-    fullDecal: "./pattern.svg",
+    logoDecal: import.meta.env.BASE_URL + "react.png",
+    fullDecal: import.meta.env.BASE_URL + "pattern.svg",
     isLogoTexture: true,
     isFullTexture: false,
     // Default logos for front and back
-    frontLogoDecal: "/front-design.png",
-    backLogoDecal: "/boson-back.png",
+    frontLogoDecal: import.meta.env.BASE_URL + "front-design.png",
+    backLogoDecal: import.meta.env.BASE_URL + "boson-back.png",
     selectedModel: "shirt", // Default model selection
   },
 
   // Available 3D models
   models: {
     shirt: {
-      path: "/shirt-baked.glb",
+      path: import.meta.env.BASE_URL + "shirt-baked.glb",
       name: "T-Shirt",
       geometry: "T_Shirt_male",
     },
     hoodie: {
-      path: "/hoodie.glb",
+      path: import.meta.env.BASE_URL + "hoodie.glb",
       name: "Hoodie",
       geometry: "Hoodie_FABRIC_3_FRONT_1850_0", // Updated to match the new hoodie model
     },

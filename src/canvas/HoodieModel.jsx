@@ -20,7 +20,7 @@ const Hoodie3DModel = () => {
     <>
       <group scale={[scale, scale, scale]} position={position}>
         <Base3DModel
-          modelPath="/hoodie.glb"
+          modelPath={import.meta.env.BASE_URL + "hoodie.glb"}
           geometryName="Hoodie_FABRIC_3_FRONT_1850_0"
           materialName="FABRIC_3_FRONT_1850"
           fallbackGeometryNames={[
@@ -38,6 +38,6 @@ const Hoodie3DModel = () => {
 };
 
 // Preload the model
-useGLTF.preload("/hoodie.glb");
+useGLTF.preload(import.meta.env.BASE_URL + "hoodie.glb");
 
 export default Hoodie3DModel;
