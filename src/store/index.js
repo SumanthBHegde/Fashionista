@@ -99,7 +99,7 @@ const state = proxy({
   maxLogoScale: 0.5,
   defaultLogoScale: 0.15,
 
-  debugMode: true,
+  debugMode: false,
 });
 
 // Make state available globally in development
