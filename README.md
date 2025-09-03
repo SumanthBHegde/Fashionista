@@ -2,6 +2,10 @@
 
 My personal project for 3D fashion customization using React and Three.js.
 
+## 🌐 Live Demo
+
+**[Try it here: https://sumanthbhegde.github.io/Fashionista/](https://sumanthbhegde.github.io/Fashionista/)**
+
 ## 🚀 Getting Started
 
 ```bash
@@ -28,6 +32,7 @@ npm run dev
 **Problem**: Logo controls don't work on hoodie model (only works on t-shirt)
 
 If you want to help fix this:
+
 - The issue is in `src/canvas/BaseModel3D.jsx` around lines 296 and 318
 - Logo rendering is disabled for hoodie with `!isHoodie` condition
 - Just need to remove that condition and test that logos position correctly
